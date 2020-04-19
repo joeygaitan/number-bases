@@ -1,6 +1,5 @@
 # Number base converter
 
-* convert from binary to decimal
-* convert from decimal to binary
-* convert from hexideciaml to decimal
-*convert from decima
+* decode changes hexidecimal and binary to decimal.
+* encode changes numbers into hexidecimal or binary
+* convert changes either or. I used them both to convert :) 
