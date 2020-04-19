@@ -61,8 +61,10 @@ def encode(number, base):
 
         # remainder is greater or equal to 10 then add in the 
         if remainder >= 10:
+            # remainder + 87 because of asccii values
             result += chr(remainder + 87)
         else:
+            # remainder is less than 10 so it displays the asccis values
             result += str(remainder)
     # return result reversed because hexidecimal result comes out reversed
     return result[::-1]
