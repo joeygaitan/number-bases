@@ -53,10 +53,19 @@ def encode(number, base):
     # ...
     # TODO: Encode number in any base (2 up to 36)
     # ...
-    encoded_result = ''
+    result = ''
     while number > 0:
+        # number = number // base
+        # remainder = number % base 
+        number, remainder = divmod(number,base)
 
-    return result
+        # remainder is greater or equal to 10 then add in the 
+        if remainder >= 10:
+            result += chr(remainder + 87)
+        else:
+            result += str(remainder)
+    # return result reversed because hexidecimal result comes out reversed
+    return result[::-1]
 
 
 def convert(digits, base1, base2):
@@ -96,7 +105,7 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()  
+    main()  
     # print(decode())
     # print(decode('14414', 5))
     # print(decode('1010', 2))
